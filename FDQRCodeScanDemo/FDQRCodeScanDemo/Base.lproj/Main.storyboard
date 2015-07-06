@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q68-yA-qvC">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="QX7-ly-Caz">
+            <objects>
+                <navigationController id="Q68-yA-qvC" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Jkb-Qd-soX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.050980396568775177" green="0.090196080505847931" blue="0.19607844948768616" alpha="1" colorSpace="deviceRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="NcR-DN-zGy" kind="relationship" relationship="rootViewController" id="AuQ-xt-BpC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qfp-Ht-JAy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-235" y="248"/>
+        </scene>
+        <!--二维码扫描-->
+        <scene sceneID="Lvg-gY-j9o">
+            <objects>
+                <viewController id="NcR-DN-zGy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FBm-hi-9TM"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZgH-s9-GWk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9fe-aW-nVC">
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢迎使用" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5g-I1-FVV">
+                                <rect key="frame" x="126" y="274" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="O5g-I1-FVV" secondAttribute="centerX" id="QP0-Ed-z6I"/>
+                            <constraint firstAttribute="centerY" secondItem="O5g-I1-FVV" secondAttribute="centerY" id="oFc-ym-06R"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="二维码扫描" id="Mab-hV-Buh">
+                        <barButtonItem key="backBarButtonItem" title="取消" id="vD3-kU-pGT"/>
+                        <barButtonItem key="rightBarButtonItem" title="扫一扫" id="XYf-jk-Exy">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="dwR-Mh-Yhr" kind="show" id="uuy-wT-hgp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FtD-6L-UM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="248"/>
+        </scene>
+        <!--二维码-->
+        <scene sceneID="2J7-EP-ui5">
+            <objects>
+                <viewController id="dwR-Mh-Yhr" customClass="FDQRCodeScanController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6gI-Cr-xOU"/>
+                        <viewControllerLayoutGuide type="bottom" id="sW8-fW-Eaj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XZY-Zi-LSs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="二维码" id="nfN-LH-2xQ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u7x-8T-3qd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="617" y="248"/>
+        </scene>
+    </scenes>
+</document>
